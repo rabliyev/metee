@@ -61,6 +61,8 @@ extern "C" {
 #endif /* _WIN32 */
 //! @endcond
 
+
+#pragma pack(push, 1)  
 /*!
  * Structure to store connection data
  */
@@ -70,7 +72,8 @@ typedef struct _TEEHANDLE {
 	size_t  maxMsgLen;        /**< FW Client Max Message Length */
 	uint8_t protcolVer;       /**< FW Client Protocol FW */
 } TEEHANDLE;
-
+#pragma pack(pop)
+  
 /*!
  * \var typedestruct _TEEHANDLE *PTEEHANDLE
  * \brief A type definition for pointer to TEEHANDLE
